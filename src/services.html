@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <title>Services</title>
   <!-- cookie3 analytics -->
-  <script>
+  <!-- <script>
     const cookie3Options = {
       siteId: 1,
       additionalTracking: true
@@ -21,7 +21,7 @@
   'https://cdn.staging.cookie3.co/scripts/analytics/latest/cookie3.analytics.min.js'; 
       s.parentNode.insertBefore(g,s);
     })();
-  </script>
+  </script> -->
   <!-- End cookie3 analytics -->
  
   
@@ -41,14 +41,22 @@
 </script> -->
 <!-- End Matomo Code -->
   
-  <!-- Matomo Tag Manager -->
+<!-- Matomo -->
 <script>
-var _mtm = window._mtm = window._mtm || [];
-_mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
-var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-g.async=true; g.src='https://a.staging.cookie3.co/js/container_9dUGmP0e.js'; s.parentNode.insertBefore(g,s);
-</script>
-<!-- End Matomo Tag Manager -->
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//a.staging.cookie3.co/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '99']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
 
 
 
