@@ -51,6 +51,7 @@ const cookie3Options = {
 
     var _paq = window._paq = window._paq || [];
     /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['disableCookies']);
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
     (function() {
@@ -95,6 +96,29 @@ const cookie3Options = {
   <footer>
 		<p>Copyright © 2023 My Website</p>
 	</footer>
+
+  <script>
+		// Redirect to page with current query parameters
+		document.querySelector('a[href="index.html"]').addEventListener('click', function(event) {
+			event.preventDefault();
+			window.location.href = 'index.html' + window.location.search;
+		});
+
+    document.querySelector('a[href="about.html"]').addEventListener('click', function(event) {
+			event.preventDefault();
+			window.location.href = 'about.html' + window.location.search;
+		});
+
+    document.querySelector('a[href="services.html"]').addEventListener('click', function(event) {
+			event.preventDefault();
+			window.location.href = 'services.html' + window.location.search;
+		});
+
+    document.querySelector('a[href="contact.html"]').addEventListener('click', function(event) {
+			event.preventDefault();
+			window.location.href = 'contact.html' + window.location.search;
+		});
+	</script>
 </body>
 
 </html>
